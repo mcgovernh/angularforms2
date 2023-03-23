@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {Validators,FormControl,FormBuilder,FormGroup} from '@angular/forms'
 import {FormsModule,ReactiveFormsModule} from '@angular/forms'
@@ -8,7 +8,7 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms'
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit{
 
   RegisterForm: FormGroup;
 

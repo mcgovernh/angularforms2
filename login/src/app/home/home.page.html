@@ -9,22 +9,22 @@
 <ion-content [fullscreen]="true">
 <form [formGroup]="RegisterForm">
 
-  <div c lass="inputfield">
+  <div class="inputfield">
     <!--<ion-input type="text" [ngModelOptions]="{standalone:true}" placeholder="Enter your email here" [(ngModel)]="valuefromuser"></ion-input> -->
-    <ion-input type="text" placeholder="Enter your email here" formControlName="name" [(ngModel)]="valuefromuser"></ion-input>
-
+    <ion-input type="text" placeholder="Enter your email here" formControlName = "
+    name" [(ngModel)]="valuefromuser"></ion-input>
   </div>
   <div *ngIf="RegisterForm.get('name').hasError('required') &&
   RegisterForm.get('name').touched  ">
     Name should not be empty
 
   </div>
-  <div *ngIf="RegisterForm.get('name').hasError('required') &&
+  <div *ngIf="RegisterForm.get('name').hasError('minLength') &&
   RegisterForm.get('name').touched  ">
     Name must be 4 chars long
 
   </div>
-  <div *ngIf="RegisterForm.get('name').hasError('required') &&
+  <div *ngIf="RegisterForm.get('name').hasError('maxLength') &&
   RegisterForm.get('name').touched  ">
     Name max 8 characters long
 
